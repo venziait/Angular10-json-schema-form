@@ -27,8 +27,6 @@ import { JsonSchemaFormService } from './json-schema-form.service';
 import { resolveSchemaReferences } from './shared/json-schema.functions';
 import { WidgetLibraryService } from './widget-library/widget-library.service';
 
-
-
 export const JSON_SCHEMA_FORM_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => JsonSchemaFormComponent),

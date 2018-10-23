@@ -146,11 +146,17 @@ export class Bootstrap3FrameworkComponent implements OnInit, OnChanges {
   initializeFramework() {
     if (this.layoutNode) {
       this.options = _.cloneDeep(this.layoutNode.options);
+      if (!this.options) {
+        this.options = {};
+      }
       this.widgetLayoutNode = {
         ...this.layoutNode,
         options: _.cloneDeep(this.layoutNode.options)
       };
       this.widgetOptions = this.widgetLayoutNode.options;
+      if (!this.widgetOptions) {
+        this.widgetOptions = {};
+      }
       this.formControl = this.jsf.getFormControl(this);
 
       this.options.isInputWidget = inArray(this.layoutNode.type, [

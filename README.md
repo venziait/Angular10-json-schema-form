@@ -1,10 +1,10 @@
-# Angular6-json-schema-form
+# Angular7-json-schema-form
 
-[![Build Status](https://travis-ci.org/hamzahamidi/Angular6-json-schema-form.svg?branch=master)](https://travis-ci.org/hamzahamidi/Angular6-json-schema-form)
-[![GitHub release](https://img.shields.io/github/release/hamzahamidi/angular6-json-schema-form.svg)](https://github.com/hamzahamidi/angular6-json-schema-form/releases/latest)
-[![npm downloads](https://img.shields.io/npm/dm/angular6-json-schema-form.svg?style=plastic)](https://www.npmjs.com/package/angular6-json-schema-form) [![GitHub MIT License](https://img.shields.io/github/license/hamzahamidi/angular6-json-schema-form.svg?style=social)](https://github.com/hamzahamidi/angular6-json-schema-form)
+[![Build Status](https://travis-ci.org/adampenn/Angular7-json-schema-form.svg?branch=master)](https://travis-ci.org/adampenn/Angular7-json-schema-form)
+[![GitHub release](https://img.shields.io/github/release/adampenn/angular7-json-schema-form.svg)](https://github.com/adampenn/angular7-json-schema-form/releases/latest)
+[![npm downloads](https://img.shields.io/npm/dm/angular7-json-schema-form.svg?style=plastic)](https://www.npmjs.com/package/angular7-json-schema-form) [![GitHub MIT License](https://img.shields.io/github/license/adampenn/angular7-json-schema-form.svg?style=social)](https://github.com/adampenn/angular7-json-schema-form)
 
-Note: This project is a continuation to [dschnelldavis/Angular2-json-schema-form](https://github.com/dschnelldavis/angular2-json-schema-form) & is and is not affiliated with any organization.
+Note: This project is a fork of [hamzahamidi/Angular6-json-schema-form](https://github.com/hamzahamidi/Angular6-json-schema-form) so that I could upgrade it to Angular 7 & is and is not affiliated with any organization.
 
 A [JSON Schema](http://json-schema.org) Form builder for Angular, similar to, and mostly API compatible with,
 
@@ -12,7 +12,7 @@ A [JSON Schema](http://json-schema.org) Form builder for Angular, similar to, an
 * [Mozilla](https://blog.mozilla.org/services/)'s [React JSON Schema Form](https://github.com/mozilla-services/react-jsonschema-form) for [React](https://facebook.github.io/react/) ([examples](https://mozilla-services.github.io/react-jsonschema-form/)), and
 * [Joshfire](http://www.joshfire.com)'s [JSON Form](http://github.com/joshfire/jsonform/wiki) for [jQuery](https://jquery.com) ([examples](http://ulion.github.io/jsonform/playground/))
 
-## Check out the live demo and play with the examples
+## Check out the live demo and play with the examples from the Angular 6 version
 
 [Check out some examples here.](https://hamidihamza.com/Angular6-json-schema-form)
 
@@ -22,13 +22,13 @@ This example playground features over 70 different JSON Schemas for you to try (
 
 ### To install from GitHub
 
-To install [the library and the example playground from GitHub](https://github.com/hamzahamidi/angular6-json-schema-form), clone `https://github.com/hamzahamidi/angular6-json-schema-form.git` with your favorite git program. Or, assuming you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Node/YARN](https://nodejs.org/en/download/) installed, enter the following in your terminal:
+To install [the library and the example playground from GitHub](https://github.com/adampenn/angular7-json-schema-form), clone `https://github.com/adampenn/angular7-json-schema-form.git` with your favorite git program. Or, assuming you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Node/YARN](https://nodejs.org/en/download/) installed, enter the following in your terminal:
 
 ```shell
-git clone https://github.com/hamzahamidi/angular6-json-schema-form.git angular6-json-schema-form
-cd angular6-json-schema-form
+git clone https://github.com/adampenn/angular7-json-schema-form.git angular7-json-schema-form
+cd angular7-json-schema-form
 yarn install
-yanr buildlib
+yarn buildlib
 yarn start
 ```
 
@@ -47,16 +47,16 @@ If you want detailed documentation describing the individual functions used in t
 
 ### To install from NPM/YARN and use in your own project
 
-If, after playing with the examples, you decide this library is functional enough to use in your own project, you can [install it from NPM](https://www.npmjs.com/package/angular6-json-schema-form) using either [NPM](https://www.npmjs.com) or [Yarn](https://yarnpkg.com). To install with NPM, run the following from your terminal:
+If, after playing with the examples, you decide this library is functional enough to use in your own project, you can [install it from NPM](https://www.npmjs.com/package/angular7-json-schema-form) using either [NPM](https://www.npmjs.com) or [Yarn](https://yarnpkg.com). To install with NPM, run the following from your terminal:
 
 ```shell
-npm install angular6-json-schema-form
+npm install angular7-json-schema-form
 ```
 
 With YARN, run the following:
 
 ```shell
-yarn add angular6-json-schema-form
+yarn add angular7-json-schema-form
 ```
 
 Then import `MaterialDesignFrameworkModule` in your main application module if you want to use `material-angular` UI, like this:
@@ -65,7 +65,7 @@ Then import `MaterialDesignFrameworkModule` in your main application module if y
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { MaterialDesignFrameworkModule } from 'angular6-json-schema-form';
+import { MaterialDesignFrameworkModule } from 'angular7-json-schema-form';
 
 import { AppComponent } from './app.component';
 
@@ -420,7 +420,7 @@ const yourNewWidgets = {
 ...or...
 
 ```javascript
-import { WidgetLibraryService } from 'angular6-json-schema-form';
+import { WidgetLibraryService } from 'angular7-json-schema-form';
 ...
 constructor(private widgetLibrary: WidgetLibraryService) { }
 ...
@@ -460,7 +460,7 @@ const yourCustomFramework = {
 ...or...
 
 ```javascript
-import { FrameworkLibraryService } from 'angular6-json-schema-form';
+import { FrameworkLibraryService } from 'angular7-json-schema-form';
 ...
 constructor(private frameworkLibrary: FrameworkLibraryService) { }
 ...
