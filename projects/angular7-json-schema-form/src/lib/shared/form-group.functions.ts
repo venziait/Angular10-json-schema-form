@@ -442,15 +442,15 @@ export function formatFormData(
 
         // Finish incomplete 'date-time' entries
         if (dataMap.get(genericPointer).get('schemaFormat') === 'date-time') {
-          // "2000-03-14T01:59:26.535" -> "2000-03-14T01:59:26.535Z" (add "Z")
+          // "2000-03-14T01:59:26.535" -> "2000-03-14T01:59:26.535" (dont add anything)
           if (/^\d\d\d\d-[0-1]\d-[0-3]\d[t\s][0-2]\d:[0-5]\d:[0-5]\d(?:\.\d+)?$/i.test(value)) {
-            JsonPointer.set(formattedData, dataPointer, `${value}Z`);
-            // "2000-03-14T01:59" -> "2000-03-14T01:59:00Z" (add ":00Z")
+            JsonPointer.set(formattedData, dataPointer, `${value}`);
+            // "2000-03-14T01:59" -> "2000-03-14T01:59:00" (add ":00")
           } else if (/^\d\d\d\d-[0-1]\d-[0-3]\d[t\s][0-2]\d:[0-5]\d$/i.test(value)) {
-            JsonPointer.set(formattedData, dataPointer, `${value}:00Z`);
-            // "2000-03-14" -> "2000-03-14T00:00:00Z" (add "T00:00:00Z")
+            JsonPointer.set(formattedData, dataPointer, `${value}:00`);
+            // "2000-03-14" -> "2000-03-14T00:00:00" (add "T00:00:00")
           } else if (fixErrors && /^\d\d\d\d-[0-1]\d-[0-3]\d$/i.test(value)) {
-            JsonPointer.set(formattedData, dataPointer, `${value}:00:00:00Z`);
+            JsonPointer.set(formattedData, dataPointer, `${value}:00:00:00`);
           }
         }
       } else if (typeof value !== 'object' || isDate(value) ||
