@@ -75,6 +75,9 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 
+@angular/core
+MIT
+
 tslib
 Apache-2.0
 Apache License
@@ -823,12 +826,6 @@ MIT
 @angular/material/menu
 
 @angular/material/toolbar
-
-@angular/core
-MIT
-
-@angular/compiler
-MIT
 
 core-js
 MIT
