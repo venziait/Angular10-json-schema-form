@@ -536,6 +536,7 @@ export function buildLayoutFromSchema(
   if (!jsf.dataMap.has(shortDataPointer)) {
     jsf.dataMap.set(shortDataPointer, new Map());
   }
+  updateInputOptions(newNode, schema, jsf);
   const nodeDataMap = jsf.dataMap.get(shortDataPointer);
   if (!nodeDataMap.has('inputType')) {
     nodeDataMap.set('schemaPointer', schemaPointer);
@@ -543,7 +544,6 @@ export function buildLayoutFromSchema(
     nodeDataMap.set('widget', newNode.widget);
     nodeDataMap.set('disabled', !!newNode.options.disabled);
   }
-  updateInputOptions(newNode, schema, jsf);
   if (!newNode.options.title && newNode.name && !/^\d+$/.test(newNode.name)) {
     newNode.options.title = fixTitle(newNode.name);
   }
